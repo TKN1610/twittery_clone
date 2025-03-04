@@ -9,10 +9,10 @@
 
 <div class="tweets-list">
   <% @tweets.each do |tweet| %>
-    <div class="tweet-box">
+    <div class="tweet-detail ">
       <p><%= tweet.content %></p>
       <%= link_to "詳細", tweet_path(tweet) %>
-      <%= link_to "削除", tweet_path(tweet), method: :delete, data: { confirm: "よろしいですか？" }, class: "btn btn-danger" %>
+      <%= link_to "削除", tweet_path(tweet), method: :delete, data: { confirm: "よろしいですか？" }, class: "tweet-button" %>
     </div>
   <% end %>
 </div>
