@@ -1,0 +1,18 @@
+<div class="header-container">
+  <h1>Twittery</h1>
+  <%= link_to "ツイート", new_tweet_path, class: "tweet-button" %>
+</div>
+
+<% if notice %>
+  <p style="color: green;"><%= notice %></p>
+<% end %>
+
+<div class="tweets-list">
+  <% @tweets.each do |tweet| %>
+    <div class="tweet-box">
+      <p><%= tweet.content %></p>
+      <%= link_to "詳細", tweet_path(tweet) %>
+      <%= link_to "削除", tweet_path(tweet), method: :delete, data: { confirm: "よろしいですか？" }, class: "btn btn-danger" %>
+    </div>
+  <% end %>
+</div>

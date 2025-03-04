@@ -1,0 +1,190 @@
+/* 投稿一覧ページのスタイリング */
+.tweets-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  .tweet-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .tweet-card a {
+    color: #1da1f2;
+    text-decoration: none;
+  }
+
+  .tweet-card a:hover {
+    text-decoration: underline;
+  }
+
+  .tweet-button {
+    background-color: #1da1f2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .tweet-button:hover {
+    background-color: #0d8bf0;
+  }
+
+/*ツイート画面*/
+.tweet-form {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
+
+.tweet-input {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tweet-button {
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tweet-button:hover {
+  background-color: #0d8bf0;
+}
+
+/*ツイートの表示*/
+.tweet-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tweet-detail {
+  color: #1da1f2;
+  text-decoration: none;
+}
+
+/*ツイートの詳細*/
+.tweet-detail {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* 編集ページや新規作成ページで使うフォームエリア */
+.tweet-form {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+}
+
+.tweet-input {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tweet-button {
+  background-color: #1da1f2;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tweet-button:hover {
+  background-color: #0d8bf0;
+}
+
+/*削除関連*/
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/*フラッシュめセージ用*/
+.flash-notice {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/*ボタンの固定*/
+.fixed-button {
+  position: fixed;
+  bottom: 20px; /* 下から20pxの位置 */
+  right: 20px;  /* 右から20pxの位置 */
+  z-index: 1000; /* 他の要素より前面に表示するためのz-index */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
