@@ -1,3 +1,9 @@
-<!-- edit.html.erb -->
+<div class="header-container">
+  <%= link_to "Twittery", tweets_path, class: "header-logo" %>
+</div>
+
+<div class="header-spacer"></div>
+
 <h1>ステータスを編集</h1>
+
 <%= render 'form', tweet: @tweet %>

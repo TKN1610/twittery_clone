@@ -1,18 +1,28 @@
 <div class="header-container">
-  <h1>Twittery</h1>
+  <%= link_to "Twittery", tweets_path, class: "header-logo" %>
+</div>
+
+<div class="header-spacer"></div>
+
+<% if notice %>
+  <div class="flash-notice"><%= notice %></div>
+<% end %>
+
+<div class="action-buttons" style="text-align: left; margin-bottom: 20px;">
   <%= link_to "ツイート", new_tweet_path, class: "tweet-button" %>
 </div>
 
-<% if notice %>
-  <p style="color: green;"><%= notice %></p>
-<% end %>
+<h1>ツイート一覧</h1>
 
 <div class="tweets-list">
   <% @tweets.each do |tweet| %>
-    <div class="tweet-detail ">
+    <div class="tweet-detail">
       <p><%= tweet.content %></p>
-      <%= link_to "詳細", tweet_path(tweet) %>
-      <%= link_to "削除", tweet_path(tweet), method: :delete, data: { confirm: "よろしいですか？" }, class: "tweet-button" %>
+      <%= link_to "詳細", tweet_path(tweet), class: "btn btn-primary" %>
+      <%= link_to "削除", tweet_path(tweet),
+                  method: :delete,
+                  data: { confirm: "よろしいですか？" },
+                  class: "btn btn-danger" %>
     </div>
   <% end %>
 </div>

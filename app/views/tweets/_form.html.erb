@@ -4,7 +4,6 @@
   </div>
 
   <div>
-    <!-- 既にあるTweetなら「更新する」、新規なら「ツイートする」など条件分岐も可能 -->
     <%= form.submit @tweet.persisted? ? "更新する" : "ツイートする", class: "tweet-button" %>
   </div>
 <% end %>

@@ -1,4 +1,68 @@
 /*────────────────────────────
+  全体の背景色
+────────────────────────────*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+/*────────────────────────────
+  ヘッダー（固定表示）
+────────────────────────────*/
+.header-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1da1f2;
+  color: #fff;
+  padding: 10px 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+/* ヘッダー内のロゴリンク */
+.header-logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ホバー時の軽いエフェクト */
+.header-logo:hover {
+  opacity: 0.8;
+}
+
+/* 固定ヘッダーの下にコンテンツをずらすための余白 */
+.header-spacer {
+  margin-top: 80px;
+}
+
+/*────────────────────────────
+  フラッシュメッセージ
+────────────────────────────*/
+.flash-notice {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+.flash-alert {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/*────────────────────────────
   レイアウト・コンテナ
 ────────────────────────────*/
 .tweets-container {
@@ -7,25 +71,9 @@
   margin: 20px auto;
 }
 
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  margin-bottom: 10px;
-}
-
-.fixed-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
 /*────────────────────────────
   ツイートカード & 詳細表示
 ────────────────────────────*/
-/* ツイート一覧のカード */
 .tweet-card {
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -42,7 +90,6 @@
   text-decoration: underline;
 }
 
-/* ツイート詳細・本文（.tweet-box と .tweet-detail は同一スタイルとして統合） */
 .tweet-box,
 .tweet-detail {
   background-color: #ffffff;
@@ -75,7 +122,6 @@
 /*────────────────────────────
   ボタン関連
 ────────────────────────────*/
-/* 共通ボタンスタイル（ツイート投稿・削除等に共通の設定） */
 .tweet-button,
 .btn,
 .btn-secondary,
@@ -87,7 +133,7 @@
   cursor: pointer;
 }
 
-/* ツイート投稿・主要なアクションボタン */
+/* ツイート投稿・主要アクションボタン */
 .tweet-button,
 .btn-primary {
   background-color: #1da1f2;
@@ -115,7 +161,7 @@
   color: #fff;
 }
 
-/* 汎用ボタン（インラインブロックで間隔も設定） */
+/* ボタンの間隔 */
 .btn {
   display: inline-block;
   margin: 5px;
@@ -130,15 +176,10 @@
   margin: 0 5px;
 }
 
-/*────────────────────────────
-  フラッシュメッセージ
-────────────────────────────*/
-.flash-notice {
-  background-color: #d4edda;
-  color: #155724;
-  padding: 10px;
-  border: 1px solid #c3e6cb;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  text-align: center;
+/*固定ボタン*/
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
 }

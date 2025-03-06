@@ -1,3 +1,8 @@
+<div class="header-container">
+  <%= link_to "Twittery", tweets_path, class: "header-logo" %>
+</div>
+<div class="header-spacer"></div>
+
 <h1>ツイート詳細</h1>
 
 <% if flash[:notice] %>
@@ -8,9 +13,11 @@
   <p><%= @tweet.content %></p>
 </div>
 
-<%= link_to "ホームに戻る", tweets_path, class: "btn btn-secondary" %>
-<%= link_to "編集する", edit_tweet_path(@tweet), class: "btn btn-primary" %>
-<%= link_to "削除", tweet_path(@tweet),
-            method: :delete,
-            data: { confirm: "よろしいですか？" },
-            class: "btn btn-danger" %>
+<div class="tweet-buttons">
+  <%= link_to "ホームに戻る", tweets_path, class: "btn btn-secondary" %>
+  <%= link_to "編集する", edit_tweet_path(@tweet), class: "btn btn-primary" %>
+  <%= link_to "削除", tweet_path(@tweet),
+              method: :delete,
+              data: { confirm: "よろしいですか？" },
+              class: "btn btn-danger" %>
+</div>
